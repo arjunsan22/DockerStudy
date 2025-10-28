@@ -7,3 +7,14 @@ services:
     build: .
     ports:
       - "2000:2000"
+    volumes:
+      - app-data:/app/logs
+    networks:
+      - app-net
+
+
+volumes:
+  app-data:
+networks:
+  app-net:
+    driver: bridge
